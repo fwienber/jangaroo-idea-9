@@ -13,20 +13,20 @@
     <orderEntry type="module-library">
       <library name="ext-xml">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/net/jangaroo/ext-xml/0.7.12/ext-xml-0.7.12.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/net/jangaroo/jangaroo-utils/0.7.12/jangaroo-utils-0.7.12.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/net/jangaroo/ext-xml/0.8.1/ext-xml-0.8.1.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/net/jangaroo/jangaroo-utils/0.8.1/jangaroo-utils-0.8.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MAVEN_REPOSITORY$/net/jangaroo/ext-xml/0.7.12/ext-xml-0.8.1-sources.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/net/jangaroo/jangaroo-utils/0.7.12/jangaroo-utils-0.7.12-sources.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/net/jangaroo/ext-xml/0.8.1/ext-xml-0.8.1-sources.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/net/jangaroo/jangaroo-utils/0.8.1/jangaroo-utils-0.8.1-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/net/jangaroo/properties-compiler/0.7.12/properties-compiler-0.7.12.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/net/jangaroo/properties-compiler/0.8.1/properties-compiler-0.8.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

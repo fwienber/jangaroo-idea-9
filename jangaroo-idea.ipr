@@ -71,6 +71,9 @@
     <option name="DEPRECATION" value="false" />
   </component>
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
   <component name="IdProvider" IDEtalkID="A6F81AA63A6BFA08AAFEDCB553CD4018" />
   <component name="InspectionProjectProfileManager">
     <profiles>
@@ -260,11 +263,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ext-xml-idea-plugin/ext-xml-idea-plugin.iml" filepath="$PROJECT_DIR$/ext-xml-idea-plugin/ext-xml-idea-plugin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/idea-debug-plugin/jangaroo-idea-debug-plugin.iml" filepath="$PROJECT_DIR$/idea-debug-plugin/jangaroo-idea-debug-plugin.iml" />
       <module fileurl="file://$PROJECT_DIR$/idea-plugin/jangaroo-idea-plugin.iml" filepath="$PROJECT_DIR$/idea-plugin/jangaroo-idea-plugin.iml" />
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="IDEA IU-95.66" project-jdk-type="IDEA JDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="IDEA IU-99.32" project-jdk-type="IDEA JDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="ProjectRunConfigurationManager">
@@ -272,6 +274,7 @@
       <module name="ext-xml-idea-plugin" />
       <option name="VM_PARAMETERS" value=" -Xms256m -Xmx768m -XX:MaxPermSize=156m -ea -agentlib:yjpagent=disablej2ee,disablecounts,disablealloc,sessionname=IntelliJIDEA" />
       <option name="PROGRAM_PARAMETERS" value="" />
+      <log_file path="$USER_HOME$/.IntelliJIdea90/system/plugins-sandbox/system/log/idea.log" checked="true" skipped="true" show_all="false" alias="IDEA LOG" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="51028" />
         <option name="TRANSPORT" value="0" />
@@ -284,6 +287,7 @@
       <module name="ext-xml-idea-plugin" />
       <option name="VM_PARAMETERS" value=" -Xms256m -Xmx768m -XX:MaxPermSize=156m -ea -agentlib:yjpagent=disablej2ee,disablecounts,disablealloc,sessionname=IntelliJIDEA" />
       <option name="PROGRAM_PARAMETERS" value="" />
+      <log_file path="$USER_HOME$/.IntelliJIdea90/system/plugins-sandbox/system/log/idea.log" checked="true" skipped="true" show_all="false" alias="IDEA LOG" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="51555" />
         <option name="TRANSPORT" value="0" />
@@ -306,7 +310,7 @@
     <option name="mySupportsUserInfoFilter" value="true" />
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
   <component name="WebServicesPlugin" addRequiredLibraries="true" />
 </project>

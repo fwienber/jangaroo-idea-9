@@ -25,16 +25,16 @@ import com.intellij.packaging.impl.elements.ModuleOutputPackagingElement;
 import org.jdom.Element;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.jetbrains.idea.maven.embedder.MavenConsole;
 import org.jetbrains.idea.maven.importing.FacetImporter;
 import org.jetbrains.idea.maven.importing.MavenModifiableModelsProvider;
 import org.jetbrains.idea.maven.importing.MavenRootModelAdapter;
-import org.jetbrains.idea.maven.project.MavenArtifact;
+import org.jetbrains.idea.maven.project.MavenConsole;
 import org.jetbrains.idea.maven.project.MavenEmbeddersManager;
 import org.jetbrains.idea.maven.project.MavenProject;
 import org.jetbrains.idea.maven.project.MavenProjectChanges;
 import org.jetbrains.idea.maven.project.MavenProjectsProcessorTask;
 import org.jetbrains.idea.maven.project.MavenProjectsTree;
+import org.jetbrains.idea.maven.project.SupportedRequestType;
 import org.jetbrains.idea.maven.utils.MavenJDOMUtil;
 import org.jetbrains.idea.maven.utils.MavenProcessCanceledException;
 import org.jetbrains.idea.maven.utils.MavenProgressIndicator;
@@ -66,8 +66,9 @@ public class JangarooFacetImporter extends FacetImporter<JangarooFacet, Jangaroo
   }
 
   @Override
-  public boolean isSupportedDependency(MavenArtifact artifact) {
-    return JANGAROO_PACKAGING_TYPE.equals(artifact.getType());
+  public void getSupportedDependencyTypes(Collection<String> result, SupportedRequestType type) {
+    super.getSupportedDependencyTypes(result, type);
+    result.add(JANGAROO_PACKAGING_TYPE);
   }
 
   @Override
@@ -96,7 +97,7 @@ public class JangarooFacetImporter extends FacetImporter<JangarooFacet, Jangaroo
     jooConfig.verbose = getBooleanConfigurationValue(mavenProjectModel, "verbose", false);
     jooConfig.enableAssertions = getBooleanConfigurationValue(mavenProjectModel, "enableAssertions", false);
     // "debug" (boolean; true), "debuglevel" ("none", "lines", "source"; "source")
-    jooConfig.outputDirectory = mavenProjectModel.getBuildDirectory() + File.separator + "joo" + File.separator + "scripts" + File.separator + "classes";
+    jooConfig.outputDirectory = mavenProjectModel.getBuildDirectory() + File.separator + "jangaroo-output" + File.separator + "joo" + File.separator + "classes";
 
     if ("war".equals(mavenProjectModel.getPackaging())) {
       postTasks.add(new AddJangarooPackagingOutputToExplodedWebArtifactsTask(jangarooFacet));
@@ -131,7 +132,7 @@ public class JangarooFacetImporter extends FacetImporter<JangarooFacet, Jangaroo
       this.jangarooFacet = jangarooFacet;
     }
 
-    public void perform(final Project project, MavenEmbeddersManager embeddersManager, MavenConsole console, MavenProgressIndicator indicator) throws MavenProcessCanceledException {
+    public void perform(final Project project, MavenEmbeddersManager mavenEmbeddersManager, MavenConsole mavenConsole, MavenProgressIndicator mavenProgressIndicator) throws MavenProcessCanceledException {
       ApplicationManager.getApplication().runReadAction(new Runnable() {
         public void run() {
           Module webModule = jangarooFacet.getModule();
