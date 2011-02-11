@@ -1,0 +1,7 @@
+# IDEA
+*.iws
+# Backups
+*.*~
+# IDEA output dir
+out
+jangaroo*.zip
